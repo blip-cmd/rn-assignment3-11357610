@@ -1,12 +1,3 @@
-/\*\*
-
-- This repository contains the code for Assignment 3 of the Mobile App Development Course. The assignment involves recreating a UI design provided in the UI mockup, utilizing various core components of React Native, and implementing custom components for enhanced functionality.
--
-- @author 11357610
-- @version 1.0
-- @since 2023-06-01
-  \*/
-
 # rn-assignment3-11357610
 
 This repository contains the code for Assignment 3 of the Mobile App Development Course. The assignment involves recreating a UI design provided in the UI mockup, utilizing various core components of React Native, and implementing custom components for enhanced functionality.
@@ -26,23 +17,6 @@ This repository contains the code for Assignment 3 of the Mobile App Development
 - FlatList or SectionList: Rendering lists of tasks
 - Image: Displaying icons and images
 
-### Requirements:
-
-- Recreate the provided design in the UI mockup.
-- Utilize all core components listed above.
-- Include at least eight categories such as Exercise, Study, Code, Cook, etc.
-- Provide a list of 15 ongoing tasks.
-- Style the application to closely match the provided UI design.
-- Use custom components throughout the application.
-
-### Instructions:
-
-1. Clone this repository to your local machine.
-2. Commit each task separately to track progress effectively.
-3. Access the UI Design [here](provided_UI_design.png) (link to UI Design).
-4. Download resources for the application from the Figma file [here](#) (link to Figma file).
-5. Write a README file that includes a brief description of each component's usage and screenshots of the app.
-
 ### Usage:
 
 To get started with the project:
@@ -54,9 +28,11 @@ To get started with the project:
 ### Screenshots:
 
 ![Screenshot 1](android_screenshots/screenshot1.png)
+---
 ![Screenshot 2](android_screenshots/screenshot2.png)
+---
 ![Screenshot 3](android_screenshots/screenshot3.png)
-
+---
 ---
 
 Hit Me Up and let's build...BuildOurNation!
