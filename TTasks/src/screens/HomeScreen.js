@@ -2,8 +2,39 @@ import React from 'react';
 import { View, Text, ScrollView, TextInput, StyleSheet, Button, FlatList, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Icons from 'react-native-vector-icons/FontAwesome5';
+import CategoryItem from '../components/CategoryItem';
+import TaskItem from '../components/TaskItem';
 
 const HomeScreen = () => {
+    const categories = [
+        { title: 'Exercise', image: require('../../assets/exercise.png') },
+        { title: 'Study', image: require('../../assets/study.png') },
+        { title: 'Code', image: require('../../assets/code.png') },
+        { title: 'Cook', image: require('../../assets/cook.png') },
+        { title: 'Read', image: require('../../assets/read.png') },
+        { title: 'Write', image: require('../../assets/write.png') },
+        { title: 'Meditate', image: require('../../assets/meditate.png') },
+        { title: 'Sleep', image: require('../../assets/sleep.png') },
+      ];
+
+      const ongoingTasks = [
+        { id: '1', title: 'Mobile App Development' },
+        { id: '2', title: 'Web Development' },
+        { id: '3', title: 'Push Ups' },
+        { id: '4', title: 'Read Chapter 3' },
+        { id: '5', title: 'Write Blog Post' },
+        { id: '6', title: 'Cooking Dinner' },
+        { id: '7', title: 'Meditation' },
+        { id: '8', title: 'Fixing Bugs' },
+        { id: '9', title: 'Yoga Session' },
+        { id: '10', title: 'Learning React Native' },
+        { id: '11', title: 'Write Unit Tests' },
+        { id: '12', title: 'Review Code' },
+        { id: '13', title: 'Study Algorithms' },
+        { id: '14', title: 'Plan Week' },
+        { id: '15', title: 'Exercise' },
+      ];
+
   return (
     <ScrollView style={styles.container}>
       <View style={styles.header}>
@@ -87,6 +118,21 @@ const styles = StyleSheet.create({
     paddingTop: 12,
     paddingLeft: 13,
   },
-});
+    sectionTitle: {
+      fontSize: 18,
+      fontWeight: 'bold',
+      marginBottom: 8,
+      marginLeft: 16,
+    },
+    categories: {
+      flexDirection: 'row',
+      marginBottom: 26,
+      paddingLeft: 16,
+    },
+    buttonContainer: {
+      marginTop: 16,
+      marginHorizontal: 16,
+    },
+  });
 
 export default HomeScreen;
