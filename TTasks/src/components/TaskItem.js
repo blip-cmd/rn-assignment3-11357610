@@ -1,19 +1,17 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const TaskItem = ({ title }) => {
-  return (
-    <View style={styles.taskCard}>
-      <Text style={styles.taskText}>{title}</Text>
-    </View>
-  );
-};
+const TaskItem = ({ title }) => (
+  <View style={styles.taskCard}>
+    <Text style={styles.taskText}>{title}</Text>
+  </View>
+);
 
 const styles = StyleSheet.create({
   taskCard: {
     backgroundColor: '#fff',
     borderRadius: 15,
-    paddingVertical: 20,
+    paddingVertical: 45,
     paddingHorizontal: 15,
     marginBottom: 8,
     borderWidth: 1,

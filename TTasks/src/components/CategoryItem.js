@@ -1,14 +1,13 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 
-const CategoryItem = ({ title, image }) => {
-  return (
-    <View style={styles.categoryCard}>
-      <Text style={styles.categoryText}>{title}</Text>
-      <Image source={image} style={styles.categoryImage} />
-    </View>
-  );
-};
+const CategoryItem = ({ title, image }) => (
+  <View style={styles.categoryCard}>
+    <Text style={styles.categoryText}>{title}</Text>
+    <Text style={styles.taskCount}>12 Tasks</Text>
+    <Image source={image} style={styles.categoryImage} />
+  </View>
+);
 
 const styles = StyleSheet.create({
   categoryCard: {
@@ -19,15 +18,19 @@ const styles = StyleSheet.create({
     height: 192,
     marginRight: 24,
   },
+  categoryImage: {
+    width: 145,
+    height: 138,
+    alignSelf: 'center',
+  },
   categoryText: {
     fontSize: 16,
     fontWeight: 'bold',
     paddingLeft: 10,
   },
-  categoryImage: {
-    width: 145,
-    height: 138,
-    alignSelf: 'center',
+  taskCount: {
+    fontSize: 14,
+    paddingLeft: 10,
   },
 });
 
