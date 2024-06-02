@@ -16,14 +16,14 @@ import TaskItem from "../components/TaskItem";
 
 const HomeScreen = () => {
   const categories = [
-    { title: "Exercise", image: require("../../assets/exercise.png") },
-    { title: "Study", image: require("../../assets/study.png") },
-    { title: "Code", image: require("../../assets/code.png") },
-    { title: "Cook", image: require("../../assets/cook.png") },
-    { title: "Read", image: require("../../assets/read.png") },
-    { title: "Write", image: require("../../assets/write.png") },
-    { title: "Meditate", image: require("../../assets/meditate.png") },
-    { title: "Sleep", image: require("../../assets/sleep.png") },
+    { title: "Exercise", image: require("../../assets/exercise.png"), taskCount: 2 },
+    { title: "Study", image: require("../../assets/study.png"), taskCount: 4 },
+    { title: "Code", image: require("../../assets/code.png"), taskCount: 3 },
+    { title: "Cook", image: require("../../assets/cook.png"), taskCount: 1 },
+    { title: "Read", image: require("../../assets/read.png"), taskCount: 2 },
+    { title: "Write", image: require("../../assets/write.png"), taskCount: 2 },
+    { title: "Meditate", image: require("../../assets/meditate.png"), taskCount: 1 },
+    { title: "Sleep", image: require("../../assets/sleep.png"), taskCount: 1 },
   ];
 
   const ongoingTasks = [
@@ -92,6 +92,7 @@ const HomeScreen = () => {
               key={index}
               title={category.title}
               image={category.image}
+              taskCount={category.taskCount}
             />
           ))}
         </ScrollView>
@@ -193,7 +194,7 @@ const styles = StyleSheet.create({
   buttonContainer: {
     marginTop: 16,
     marginHorizontal: 16,
-    marginBottom:16,
+    marginBottom: 16,
   },
 });
 

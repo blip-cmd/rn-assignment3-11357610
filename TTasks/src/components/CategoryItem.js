@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 
-const CategoryItem = ({ title, image }) => (
+const CategoryItem = ({ title, image, taskCount }) => (
   <View style={styles.categoryCard}>
     <Text style={styles.categoryText}>{title}</Text>
-    <Text style={styles.taskCount}>12 Tasks</Text>
+    <Text style={styles.taskCount}>{taskCount} Tasks</Text>
     <Image source={image} style={styles.categoryImage} />
   </View>
 );
