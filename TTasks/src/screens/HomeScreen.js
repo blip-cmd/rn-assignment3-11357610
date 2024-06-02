@@ -5,9 +5,9 @@ import {
   TextInput,
   Image,
   StyleSheet,
-  ScrollView,
   Button,
   FlatList,
+  ScrollView,
 } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 import Icons from "react-native-vector-icons/FontAwesome5";
@@ -45,7 +45,7 @@ const HomeScreen = () => {
   ];
 
   return (
-    <ScrollView style={styles.container}>
+    <View style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
         <View>
@@ -80,20 +80,22 @@ const HomeScreen = () => {
       </View>
 
       {/* Categories */}
-      <Text style={styles.sectionTitle}>Categories</Text>
-      <ScrollView
-        horizontal={true}
-        showsHorizontalScrollIndicator={false}
-        style={styles.categories}
-      >
-        {categories.map((category, index) => (
-          <CategoryItem
-            key={index}
-            title={category.title}
-            image={category.image}
-          />
-        ))}
-      </ScrollView>
+      <View>
+        <Text style={styles.sectionTitle}>Categories</Text>
+        <ScrollView
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}
+          style={styles.categories}
+        >
+          {categories.map((category, index) => (
+            <CategoryItem
+              key={index}
+              title={category.title}
+              image={category.image}
+            />
+          ))}
+        </ScrollView>
+      </View>
 
       {/* Ongoing Tasks */}
       <Text style={styles.sectionTitle}>Ongoing Tasks</Text>
@@ -101,17 +103,13 @@ const HomeScreen = () => {
         data={ongoingTasks}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => <TaskItem title={item.title} />}
+        ListFooterComponent={
+          <View style={styles.buttonContainer}>
+            <Button title="Add New Task" onPress={() => alert("Button Pressed")} color="#ff5737"/>
+          </View>
+        }
       />
-
-      {/* Add Task Button */}
-      <View style={styles.buttonContainer}>
-        <Button
-          title="Add New Task"
-          onPress={() => alert("Button Pressed")}
-          color="#ff5733"
-        />
-      </View>
-    </ScrollView>
+    </View>
   );
 };
 
@@ -119,8 +117,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#F7F0E8",
-    paddingBottom: 50,
-    paddingTop: 50,
+    paddingTop: 30,
   },
   header: {
     flexDirection: "row",
@@ -139,7 +136,6 @@ const styles = StyleSheet.create({
     lineHeight: 14.4,
     textAlign: "left",
   },
-
   userImageContainer: {
     backgroundColor: "#fff",
     padding: 5,
@@ -197,6 +193,7 @@ const styles = StyleSheet.create({
   buttonContainer: {
     marginTop: 16,
     marginHorizontal: 16,
+    marginBottom:16,
   },
 });
 

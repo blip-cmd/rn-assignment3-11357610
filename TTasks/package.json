@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo-google-fonts/lato": "^0.2.3",
     "@expo/metro-runtime": "~3.2.1",
     "expo": "~51.0.9",
     "expo-app-loading": "^2.1.1",
